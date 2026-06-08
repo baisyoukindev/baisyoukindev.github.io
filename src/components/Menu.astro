@@ -1,0 +1,134 @@
+---
+import cs2 from "../assets/cs2.webp";
+import celeste from "../assets/celeste.webp";
+import minecraft from "../assets/minecraft.webp";
+import portal from "../assets/portal.webp";
+import lucid from "../assets/lucid.webp";
+---
+
+<header>a</header>
+<main>
+	<div class="menu">
+		<div class="line"></div>
+
+		<div class="contents">
+			<fieldset>
+				<legend>Baisyoukin.dev</legend>
+				<p>
+					mediocre developer, linux sysadmin, she/her<br />
+					from sushi country🍣🇯🇵<br />
+					contact me: baisyoukin@baisyoukin.dev
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>Skill</legend>
+				<p>Linux, java, gleam, python, go, typescript</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>Project</legend>
+				<p>this site (lol)</p>
+			</fieldset>
+
+			<fieldset>
+				<legend>Favorite Games</legend>
+				<div class="images">
+					<a href="https://www.counter-strike.net/cs2">
+						<img src={cs2.src} alt="cs2" />
+					</a>
+					<a href="https://www.minecraft.net">
+						<img src={minecraft.src} alt="minecraft" />
+					</a>
+					<a href="https://www.celestegame.com">
+						<img src={celeste.src} alt="celeste" />
+					</a>
+					<a href="https://www.thinkwithportals.com/">
+						<img src={portal.src} alt="portal 2" />
+					</a>
+					<a href="https://lucidblocks.com">
+						<img src={lucid.src} alt="lucid blocks" />
+					</a>
+				</div>
+			</fieldset>
+		</div>
+	</div>
+</main>
+
+<style>
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	main {
+		display: grid;
+		place-items: center;
+	}
+
+	.menu {
+		width: 80%;
+		max-width: 400px;
+		height: fit-content;
+
+		border: 4px solid var(--gray);
+		border-style: double;
+		background-color: var(--menu);
+
+		animation: fadein 0.2s linear;
+
+		display: grid;
+		grid-template-areas:
+			"line line"
+			"contents contents";
+	}
+
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+	}
+
+	.line {
+		grid-area: line;
+		background: linear-gradient(100deg, #45aaf2, #fc5c65, #fed330);
+		height: 1px;
+		margin: 1px;
+	}
+
+	.contents {
+		grid-area: contents;
+	}
+
+	fieldset {
+		margin: 20px;
+		padding: 4px;
+		border: 1px solid var(--gray);
+		background-color: var(--section);
+	}
+	fieldset p {
+		margin-left: 20px;
+	}
+
+	legend {
+		color: var(--fg);
+		font-weight: bold;
+
+		text-align: left;
+		padding: 0 4px;
+		margin-left: 6px;
+
+		line-height: 0.2;
+	}
+
+	.images {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin: 4px;
+		justify-content: center;
+	}
+	.images img {
+		height: 40px;
+	}
+</style>

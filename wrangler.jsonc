@@ -1,6 +1,8 @@
 {
 	"compatibility_date": "2026-06-08",
-	"compatibility_flags": ["global_fetch_strictly_public"],
+	"compatibility_flags": [
+		"global_fetch_strictly_public"
+	],
 	"name": "website",
 	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
@@ -9,5 +11,11 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"kv_namespaces": [
+		{
+			"binding": "website-session",
+			"id": "52f00f543f644f86bc60073ebbbcefc5"
+		}
+	]
 }
